@@ -4,35 +4,22 @@
 #include <iostream>
 #include <string>
 
-int N = 20;
 
-int ChetNechet(int i)
+
+int ChetNechet(int i, int N)
 {
-    if (i == 1)
+    for (i; i <= N; i = i+2)
     {
-        for (int k = 1; k <= N; k++)
-        {
-            if (k % 2 == 0)
-            {
-                std::cout << k << "\n";
-            }
-        }
+        std::cout << i << "\n";
     }
-    else
-    {
-        for (int k = 1; k <= N; k++)
-        {
-            if (k % 2 != 0)
-            {
-                std::cout << k << "\n";
-            }
-        }
-    }
-    return 0;
+
+ return 0;
 }
 
 int main()
 {
+    int N = 20;
+
     /*int i = 1;
     while(i < N)
     {
@@ -43,6 +30,7 @@ int main()
         }
         i++;
     }*/
+    //Задача номер 1
     for (int k=1; k <= N; k++)
     {
         if (k % 2 == 0)
@@ -54,10 +42,10 @@ int main()
     int choice=0;
     if (choice !=1 || choice !=2)
     {
-        std::cout << "Enter 1 if you want to display even numbers" << "\n" << "Enter 2 if you want to display odd numbers" << "\n";
+        std::cout << "Enter 1 if you want to display odd numbers" << "\n" << "Enter 2 if you want to display even numbers" << "\n";
         std::cin >> choice;
     }
-    ChetNechet(choice);
+    ChetNechet(choice, N);
       
 }
 
